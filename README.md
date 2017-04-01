@@ -1,25 +1,12 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# gallery
+Проект под названием "Gallery"
+<li>
+/ Добавлены функционалы
+/ Добавление фотографий
+/ Добавление комментов
+/ Добавление рейтингов
+/ Фиксация проблем ( Average /NaN/, Коммент JS, и мелкие проблемы )
+/ Фиксация проблем, удаление мусора
+/ Добавления тестов через seeds.rb
+</li>
