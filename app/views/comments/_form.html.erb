@@ -1,8 +1,11 @@
 <%= form_for [@photo, @photo.comments.build] do |f| %>
-	<div id="comment_new<%= @photo.id %>">
+  <div id="comment_new<%= @photo.id %>">
     	<%= f.text_area :msg, placeholder: 'Enter you comment' %>
   </div>
 
+  <div> 
+  <%= f.select :rate, options_for_select([1, 2, 3, 4, 5]) %>
+  </div>
 
   <%= f.submit 'Комментировать', class: "btn btn-default" %>
 <% end %>

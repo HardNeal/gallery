@@ -2,7 +2,8 @@
 <div><%= link_to "Назад", root_path, class: 'btn btn-default' %></div>
 <p></p>
 <div><%= image_tag @photo.image.url(:medium) %></div>
-
+	<h3>Average: <%= average.round(2) %></h3>
+<hr>
 <h4><%= link_to 'Свернуть/Развернуть', '#', id: 'comments-link' %></h4>
 <div id="comment-section">
   <ol id="comments">
