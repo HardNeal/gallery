@@ -1,0 +1,20 @@
+  <center>
+  	<div class="row row-photo">
+  		<div class="col-xs-6 col-md-3">
+  			<hr></hr>
+  			<% @photos.each do |photo|%>
+  		</div>
+  	</div>
+ 
+  	<div class="">
+  		<div class="col-md-3">
+  			<div class="thumbnail">
+  				<p>Название: <b><%= photo.name %></b></p>
+          <p>By: <b><%= photo.user.name if photo.user %></b>
+  				<p>Действие: <b><%= link_to 'Оценить', photo_path(photo.id) %></b></p>
+  				<p><%= image_tag photo.image.url(:thumb) %></p>
+  				<% end %>
+  			</div>
+  		</div>
+  	</div>
+  </center>	

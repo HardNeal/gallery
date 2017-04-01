@@ -1,0 +1,31 @@
+<center>
+ <%= form_for @photo do |f| %>
+      <hr></hr>
+	<div class="field">
+		<%= f.label :Название %><br />
+		<%= f.text_field :name, class: "well" %>
+	</div>
+
+	</div>
+		<%= f.hidden_field :user_id, :value => current_user.id %>
+	<div class="field">
+
+	<div class="field">
+		<%= f.label :Описание %><br />
+		<%= f.text_area :desc, class: "well" %>
+	</div>
+	
+	<div class="field">   
+		<%= f.label :Фото %>
+		<%= f.file_field :image, class: "well" %>
+	</div>
+	<div><b>Картинки разрешеных форматов "jpeg, png, gif"</b></div>
+	
+	<hr></hr>
+	<div class="actions">
+        <%= f.submit "Опубликовать", class: "btn btn-default" %>
+    </div>
+
+    --->  <%= link_to 'Отменить', root_path %>
+ <% end %>
+</center>
