@@ -12,7 +12,11 @@ class ApplicationController < ActionController::Base
 	end
 
 	def average
-    @averate = @photo.comments.sum(:rate) / @photo.comments(:rate).size.to_f
+    if @photo.comments.sum(:rate) == 0
+      @average = 0
+    else
+      @averate = @photo.comments.sum(:rate) / @photo.comments(:rate).size.to_f
+    end
   end
 
   def configure_permitted_parameters
