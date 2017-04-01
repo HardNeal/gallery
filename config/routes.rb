@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  
-  resources :photos
+
+  resources :photos do 
+  	resources :comments
+  end
   ActiveAdmin.routes(self)
 
   devise_for :users

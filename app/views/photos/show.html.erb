@@ -2,4 +2,15 @@
 <div><%= link_to "Назад", root_path, class: 'btn btn-default' %></div>
 <p></p>
 <div><%= image_tag @photo.image.url(:medium) %></div>
+
+<h4><%= link_to 'Свернуть/Развернуть', '#', id: 'comments-link' %></h4>
+<div id="comment-section">
+  <ol id="comments">
+    <%= render @photo.comments %>
+  </ol>
+
+  <h3>Добавить комментарий:</h3>
+  <%= render 'comments/form' %>
+</div>
+
 </center>
